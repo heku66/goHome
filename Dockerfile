@@ -1,4 +1,5 @@
 FROM alpine
 WORKDIR /app
 ADD gohome.tar.gz .
-CMD [ "./app/goHome/goHome" ]
+RUN chmod +x /app/goHome/goHome
+CMD [ "./goHome/goHome" ]
