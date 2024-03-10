@@ -3,4 +3,4 @@ RUN apk update && apk add --no-cache tar
 WORKDIR /
 COPY linux86.tar.gz .
 EXPOSE 6060
-ENTRYPOINT echo "hello with entrypoint"
+CMD echo "hello with cmd"
