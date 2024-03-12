@@ -1,7 +1,7 @@
 FROM alpine
 WORKDIR /app
-ADD linux86.tar.gz .
-# RUN tar -zxf linux86.tar.gz && rm ./linux86.tar.gz
+COPY linux86.tar.gz .
+RUN tar -zxf linux86.tar.gz # && rm ./linux86.tar.gz
 EXPOSE 6060
-WORKDIR /app/linux86
-ENTRYPOINT [ "./goHome" ]
+#WORKDIR /app/linux86
+#ENTRYPOINT [ "./goHome" ]
